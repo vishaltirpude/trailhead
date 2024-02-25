@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:registerEvent name="accEvent" type="c:AccountEvent"/>
+    <aura:attribute name="newAccount" type="Account" default="{ 'sobjectType': 'Account',
+                     'Name': ''
+                   }"/>
+    <form>
+    	<ui:inputText aura:id="AccountName" label="New Account Name"
+                      value="{!v.newAccount.Name}" required="true"></ui:inputText>
+        <ui:button label="Submit" press="{!c.createAccount}"></ui:button>
+        <ui:button label="Cancel" press="{!c.Close}"></ui:button>
+    </form>
+</aura:component>

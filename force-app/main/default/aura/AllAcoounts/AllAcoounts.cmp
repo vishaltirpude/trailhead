@@ -1,0 +1,15 @@
+<aura:component controller="AccountControllerDemo">
+    <aura:attribute name="accList" type="Object[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    List of Accounts
+    <table>
+        <thead>
+    		<tr><th>ID</th><th>Name</th></tr>
+        </thead>
+        <tbody>
+            <aura:iteration var="acnt" items="{!v.accList}">
+            <tr><td>{!acnt.Id}</td><td>{!acnt.Name}</td></tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component >
+	Parent Component
+    <c:ChildComponent />
+    
+    
+    Parent Component
+    <aura:handler name="concatFullName" event="c:StringConcatEvent" action="{!c.handleChildComponentEvent}" />
+    <aura:attribute name="fullname" type="String" />
+    Full Name = {!v.fullname}
+</aura:component>

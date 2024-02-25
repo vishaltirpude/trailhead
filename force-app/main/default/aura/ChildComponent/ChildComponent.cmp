@@ -1,0 +1,13 @@
+<aura:component >
+    
+    <aura:attribute name="firstname" type="String" />
+    <aura:attribute name="lastname" type="String" />
+    <aura:registerEvent name="concatFullName" type="c:StringConcatEvent" />
+    
+    <form>
+        <lightning:input name="firstname" value="{!v.firstname}" label="First Name" />
+        <lightning:input name="lastname" value="{!v.lastname}" label="Last Name" />
+        <br/>
+        <lightning:button onclick="{!c.concatString}" label="Concat" />
+    </form>
+</aura:component>

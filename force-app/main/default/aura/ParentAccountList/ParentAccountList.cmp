@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:attribute name="accList" type="Account[]" />
+    <aura:attribute name="accountReceivedFromChildComponent" type="Account" default="{ 'sobjectType': 'Account',
+                     'Name': ''
+                   }"/>
+    <aura:handler name="accEvent" event="c:AccountEvent" action="{!c.handleComponentEvent}" />
+    
+    <c:ChildAccountCreation />
+    
+    <table>
+    <thead></thead>
+    <tr><td>Name</td></tr>
+        <tbody>
+            <aura:iteration var="acc" items="{!v.accList}">
+            <tr><td>{!acc.Name}</td></tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    
+</aura:component>
