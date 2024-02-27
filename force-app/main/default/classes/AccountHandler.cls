@@ -1,5 +1,5 @@
 public class AccountHandler {
-    public static Account insertNewAccount(String accName){
+    public static Account insertNewAccount(String accName ){
         Account acct = new Account(Name=accName);
         try{
        	 		insert acct;
